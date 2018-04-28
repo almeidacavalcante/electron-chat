@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     color: white;
     /* background-color: #49334D; */
@@ -40,18 +40,57 @@ body{
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    display: block;
-
+    overflow-x: hidden;
 }
 
 .main-content{
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     height: 100%;
-    width: 68%;
+    width: calc(68%);
+    right: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    z-index: 10;
+}
+
+.main-content .chat-header{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    z-index: 10;
+    box-sizing: border-box;
+    right: 0px;
+    border-left: 1px solid rgb(194, 231, 255)
+}
+
+.main-content .chat-body{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color:  rgb(194, 231, 255);
+    z-index: 10;
+    box-sizing: border-box;
+    right: 0px;
+    top: 50px;
     overflow: scroll;
     overflow-x: hidden;
-    float: right;
+}
+
+
+
+.main-content .text-box{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color:  rgb(255, 255, 255);
+    z-index: 10;
+    box-sizing: border-box;
+    right: 0px;
+    bottom: 0px;
+    border-left: 1px solid rgb(194, 231, 255)
 }
 
 .menu-bar{
@@ -102,7 +141,7 @@ body{
     position: relative;
     box-sizing: border-box;
     height: 100%;
-    width: 32%;
+    width: calc(32% - 60px);
     min-width: 200px;
     display: inline-block;
     overflow: hidden;
@@ -168,14 +207,23 @@ body{
     position: relative;
     box-sizing: border-box;
     border: 0px;
-    padding-left: 8px;
+    padding-left: 40px;
     padding-right: 8px;
     font-size: 11px;
     color: rgb(128, 190, 190);
     background-color: rgb(194, 231, 255);
     transition: all 0.3s ease-in-out;
     border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid white;
+}
+
+.lupa{
+    position: absolute;
+    color: rgb(128, 190, 190);
+    bottom: 14px;
+    left: 14px;
+    z-index: 10;
+
 }
 
 .search::placeholder{
@@ -210,16 +258,17 @@ body{
     border-radius: 50%;
     position: relative;
     float: left;
-    margin-top: 10px;
-    margin-left: 25px;
+    margin-top: 15px;
+    margin-left: 20px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 
 .chat .dots {
-    position: relative;
-    margin-right: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
     float: right;
     margin-top: -10px;
     color: gray;
@@ -238,47 +287,57 @@ body{
 }
 
 .chat .name{
-    color: rgb(94, 94, 94);
+
+    color: gray;
+    font-size: 12px;
     font-weight: bold;
-    position: relative;
+    position: absolute;
     display: inline-block;
-    margin-top: 8px;
-    margin-left: 13px;
+    margin-left: calc(78px - 60px);
+    margin-top: 10px;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .chat .sintese{
+
     color: gray;
     font-size: 11px;
-    width: 60%;
+    width: 70%;
+    overflow: hidden;
+    max-width: 60%;
+    height: 25px;
     font-weight: 500;
-    position: relative;
+    position: absolute;
     display: block;
-    margin-left: 78px;
-    margin-top: 7px;
+    margin-left: 18px;
+    margin-top: 50px;
     line-height: 13px;
+    display: inline-block;
     box-sizing: border-box;
 }
 
 .chat .status{
+
     color: rgb(170, 170, 170);
     width: 80%;
     font-size: 10px;
     font-weight: 500;
-    position: relative;
-    display: block;
-    margin-left: 78px;
-    margin-top: 2px;
-    line-height: 10px;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 25px;
+    line-height: 13px;
+
     box-sizing: border-box;
 }
 
 .hour {
-    position: relative;
-    margin-right: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
     font-size:10px;
     font-weight: 700;
     float: right;
-    margin-top: -50px;
     box-sizing: border-box;
     color: rgb(143, 196, 231);
 }

@@ -1,0 +1,54 @@
+
+.main-content .chat-body .message-me{
+    border-radius: 5px;
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 20px 60px 0px 20px;
+    display: inline-block;
+    float: right;
+}
+
+.main-content .chat-body .message-me .text{
+    color: white;
+    background-color: #44AEF3;
+    border-radius: 10px;
+    width: calc(100% - 60px);
+    height: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+}
+
+.main-content .chat-body .message-me .text .time{
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+}
+
+.message-me .speech-bubble-me {
+	position: relative;
+	background: #9bcbd0;
+	border-radius: .4em;
+}
+
+.message-me .speech-bubble-me:after {
+	content: '';
+	position: absolute;
+	right: 0;
+    bottom: 18px;
+	width: 0;
+	height: 0;
+	border: 26px solid transparent;
+	border-left-color: #44AEF3;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -18px;
+	margin-right: -16px;
+}

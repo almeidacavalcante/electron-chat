@@ -1,0 +1,67 @@
+
+.main-content .chat-body .message{
+    border-radius: 5px;
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 20px 20px 0px 20px;
+    display: inline-block;
+}
+
+.main-content .chat-body .message .text{
+    color: gray;
+    background-color: white;
+    border-radius: 10px;
+    width: calc(100% - 60px);
+    height: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+}
+
+.main-content .chat-body .message .text .time{
+    color: gray;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+}
+
+.main-content .chat-body .message .picture img{
+    background-color: peru;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.message .speech-bubble {
+	position: relative;
+	background: #9bcbd0;
+	border-radius: .4em;
+}
+
+.message .speech-bubble:before {
+	content: '';
+	position: absolute;
+    z-index: 0;
+    float: left;
+    top: 18px;
+    left: -15px;
+	width: 0;
+	height: 0;
+	border: 26px solid transparent;
+	border-right-color: white;
+	border-left: 0;
+	border-top: 0;
+}

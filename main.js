@@ -6,8 +6,10 @@ let mainWindow = null;
 app.on('ready', () => {
 
     mainWindow = new BrowserWindow({
-            width: 800,
-            height: 600,
+            width: 930,
+            minWidth: 930,
+            height: 624,
+            minHeight: 624,
             frame: false,
             transparent: true
     });
