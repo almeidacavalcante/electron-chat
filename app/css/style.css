@@ -286,4 +286,34 @@ body{
 
 
 
+  
+  .btn:hover {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .btn__badge {
+    background: #FF5D5D;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    left:55px;
+    padding: 2px 5px;
+    border-radius: 15px;
+  }
+  
+  .btn__badge--blue {
+    background: #33B6E6;
+  }
+  
+  .btn__badge--green {
+    background: #6fd162;
+  }
+  
+  .btn__badge--purple {
+    background: #b262d1;
+  }
+
+  
+
 
